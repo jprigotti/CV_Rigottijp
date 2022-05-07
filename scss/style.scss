@@ -20,13 +20,14 @@ $black: #000 !default;
 
 .main {
     display: flex;
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 //--------------------------------SECTION ASIDE-----------------------------------
 .sectionAside {
     width: 30%;
+    min-width: 300px;
     margin-top: 1rem;
     margin-bottom: 1rem;
     background-color: $gray-700;
@@ -40,15 +41,15 @@ $black: #000 !default;
     padding: 1rem;
 }
 
-.sectionAside .picture{
+.sectionAside .picture {
     display: flex;
 }
 
-.sectionAside .picture img{
+.sectionAside .picture img {
     width: 250px;
     border-radius: 50%;
-     margin: 0 auto;
-     border: 3px solid $gray-500;
+    margin: 0 auto;
+    border: 3px solid $gray-500;
 }
 
 
@@ -80,7 +81,7 @@ $black: #000 !default;
     font-family: 'Roboto', sans-serif;
 }
 
-.sectionBody .name{
+.sectionBody .name {
     width: 90%;
     margin: 0 auto;
     padding-bottom: 1rem;
@@ -89,7 +90,7 @@ $black: #000 !default;
 
 .sectionBody .name h1 {
     font-weight: 600;
-text-align: center;
+    text-align: center;
     margin-top: 2rem;
     color: $gray-700
 }
@@ -99,39 +100,54 @@ text-align: center;
     color: $gray-500;
 }
 
-.academic, .workExperience{
+.academic,
+.workExperience {
     padding: 1rem;
     margin-top: 2REM;
 }
 
-.sectionBody .iconAcademicBorder{
+.sectionBody .iconAcademicBorder {
     border-radius: 5px;
     border: 1px solid $gray-700;
-    padding: 0.5rem;
+    padding: 0.4rem;
     margin-right: 1rem;
-    }
+}
 
-.sectionBody .iconWorkBorder{
+.sectionBody .iconAcademicBorder:hover {
+    cursor: pointer;
+    background-color: $gray-300;
+}
+
+.sectionBody .iconWorkBorder {
     border-radius: 5px;
     border: 1px solid $gray-700;
     padding: 0.5rem 0.7rem;
     margin-right: 1rem;
-    }
+}
 
-.sectionBody .h2{
+.sectionBody .iconWorkBorder:hover {
+    cursor: pointer;
+    background-color: $gray-300;
+}
+
+.sectionBody .h2 {
     margin-left: 1rem;
 }
 
-.certifications, .jobs{
+.certifications,
+.jobs {
     border-left: 1px solid $gray-700;
     margin-left: 25px;
     margin-top: 30px;
     padding-bottom: 20px;
 }
 
-.certifications .certificate , .jobs .company{
-display: flex;
-align-items: center;
+
+
+.certifications .certificate,
+.jobs .company {
+    display: flex;
+    align-items: center;
 }
 
 .sectionBody .circle {
@@ -141,8 +157,8 @@ align-items: center;
     background-color: $gray-100;
     border: 1px solid $gray-700;
     position: relative;
-    left: -8px;   
-    top: 10px; 
+    left: -8px;
+    top: 10px;
     margin: 0.5rem 0;
 }
 
@@ -150,42 +166,70 @@ align-items: center;
     background-color: $gray-300;
 }
 
-.sectionBody .date, .degree{
+.sectionBody .date,
+.degree {
     position: relative;
     top: 8px;
 }
 
-.sectionBody .date{
-width: 150px;
+.sectionBody .date {
+    width: 150px;
 }
 
 
-.sectionBody .degree{
+.sectionBody .degree {
     font-weight: 600;
     margin-left: 1rem;
 }
 
-.certifications .certificateDetails{
+.certifications .certificateDetails {
     margin-left: 50px;
     margin-top: 0.5rem;
     color: $gray-700;
     font-size: 0.9rem;
 }
 
-.workExperience .jobDetails{
+.workExperience .jobDetails {
     margin-left: 50px;
     margin-top: 0.5rem;
     color: $gray-700;
     font-size: 0.9rem;
 }
 
-.sectionBody a{
+.sectionBody a {
     text-decoration: none;
     color: rgb(165, 31, 154);
     padding-left: 0.5rem;
 }
 
-.sectionBody a:hover{
+.sectionBody a:hover {
     text-decoration: none;
     color: rgb(170, 118, 166);
+}
+
+
+// ----------- JS ---------------
+.containerAcademic, .containerJobs{
+    display: none;
+}
+
+// ------------ MediaQuery ----------
+/* MEDIA QUERIES MD 768*/
+@media(max-width: 768px) {
+
+    .main{
+        flex-direction: column;
+    }
+
+    .sectionAside {
+        width: 100%;
+    }
+
+    .sectionAside .profile{
+        text-align: center;
+    }
+
+    .sectionBody{
+        width: 100%;
+    }
 }
