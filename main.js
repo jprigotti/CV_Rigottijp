@@ -1,17 +1,19 @@
 
-let estado=false;
+let estadoAcademic=false;
+let estadoWorkExperience=false;
+
 // Function to change the content of t2
 function modifyAcademic() {
 let elemento1 = document.querySelector(".containerAcademic");
-(estado) ? elemento1.style.display="none" : elemento1.style.display="contents";
-estado=!estado;
+(estadoAcademic) ? elemento1.style.display="none" : elemento1.style.display="contents";
+estadoAcademic=!estadoAcademic;
 console.log(estado);
   }
 
 function modifyWorkExperience() {
 let elemento1 = document.querySelector(".containerJobs");
-(estado) ? elemento1.style.display="none" : elemento1.style.display="contents";
-estado=!estado;
+(estadoWorkExperience) ? elemento1.style.display="none" : elemento1.style.display="contents";
+estadoWorkExperience=!estadoWorkExperience;
 console.log(estado);
   }
   
