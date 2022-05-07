@@ -7,7 +7,6 @@ function modifyAcademic() {
 let elemento1 = document.querySelector(".containerAcademic");
 (estadoAcademic) ? elemento1.style.display="none" : elemento1.style.display="contents";
 estadoAcademic=!estadoAcademic;
-console.log(estado);
   }
 
 function modifyWorkExperience() {
