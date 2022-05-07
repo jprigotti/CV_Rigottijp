@@ -41,6 +41,10 @@ $black: #000 !default;
     padding: 1rem;
 }
 
+.main .nameAside{
+    display: none;
+}
+
 .sectionAside .picture {
     display: flex;
 }
@@ -152,7 +156,7 @@ $black: #000 !default;
 
 .sectionBody .circle {
     border-radius: 50%;
-    width: 16px;
+    min-width: 16px;
     height: 16px;
     background-color: $gray-100;
     border: 1px solid $gray-700;
@@ -221,8 +225,23 @@ $black: #000 !default;
         flex-direction: column;
     }
 
+    .main .name{
+        display: none;
+    }
+
+    .main .nameAside{
+        display: contents;
+        text-align: center;
+    }
+
+    .main .title{
+        font-size: 1.2rem;
+    }
+
     .sectionAside {
         width: 100%;
+  
+        margin: 0;
     }
 
     .sectionAside .profile{
@@ -231,5 +250,8 @@ $black: #000 !default;
 
     .sectionBody{
         width: 100%;
-    }
+        box-shadow: none;
+        margin: 0;
+        }
 }
+
